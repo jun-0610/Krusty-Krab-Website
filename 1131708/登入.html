@@ -1,78 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link  rel="stylesheet" href="登入.css">
-    <title>會員登入&註冊</title>
-   <style>
-           body {
+    <link rel="stylesheet" href="登入.css">
+    <title>會員登入 - 蟹堡王餐廳</title>
+    <style>
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-image: url('images/登入背景.jpg');
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
         }
         .container {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 420px;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 420px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #0078D7;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             font-weight: bold;
+            color: #333;
         }
         .form-group input {
             width: 100%;
-            padding: 10px;
+            padding: 10px 12px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        .form-group input:focus {
+            border-color: #0078D7;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 120, 215, 0.4);
         }
         .form-group .btn {
             display: block;
             text-align: center;
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: none;
-            background: #007BFF;
+            background: #0078D7;
             color: white;
             font-size: 16px;
-            border-radius: 4px;
+            font-weight: bold;
+            border-radius: 6px;
             cursor: pointer;
             text-decoration: none;
+            box-sizing: border-box;
+            transition: background 0.2s ease;
         }
         .form-group .btn:hover {
-            background: #0056b3;
+            background: #005bb5;
         }
         .toggle {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 14px;
         }
         .toggle a {
-            color: #007BFF;
+            color: #0078D7;
             text-decoration: none;
             font-weight: bold;
         }
         .toggle a:hover {
             text-decoration: underline;
         }
-   </style>
+        .home-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .home-link a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .home-link a:hover {
+            color: #0078D7;
+        }
+    </style>
 </head>
 <body>
-	<div class="container" id="container">
-     <form id="loginForm">
-            <h2>登入</h2>
+    <div class="container" id="container">
+        <form id="loginForm" onsubmit="event.preventDefault(); window.location.href='index22222.html';">
+            <h2>🦀 蟹堡王會員登入</h2>
             <div class="form-group">
                 <label for="loginEmail">電子郵件</label>
                 <input type="email" id="loginEmail" placeholder="輸入電子郵件地址" required>
@@ -82,28 +116,15 @@
                 <input type="password" id="loginPassword" placeholder="輸入密碼" required>
             </div>
             <div class="form-group">
-                <a href="index22222.html" class="btn">登入</a>
+                <button type="submit" class="btn">立即登入</button>
             </div>
-            
+            <div class="toggle">
+                <span>還沒有會員？ <a href="會員登入註冊.html">前往註冊</a></span>
+            </div>
+            <div class="home-link">
+                <a href="index.html">⬅️ 返回蟹堡王餐廳首頁</a>
+            </div>
         </form>
-        </div>
-
-        
-    <script>
-        const loginForm = document.getElementById('loginForm');
-        const registerForm = document.getElementById('registerForm');
-        const showRegister = document.getElementById('showRegister');
-        const showLogin = document.getElementById('showLogin');
-
-        showRegister.addEventListener('click', () => {
-            loginForm.style.display = 'none';
-            registerForm.style.display = 'block';
-        });
-
-        showLogin.addEventListener('click', () => {
-            registerForm.style.display = 'none';
-            loginForm.style.display = 'block';
-        });
-    </script>
+    </div>
 </body>
 </html>

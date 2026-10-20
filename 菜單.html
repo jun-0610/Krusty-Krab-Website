@@ -106,7 +106,7 @@
     
 	<header class="navbar navbar-expand-md bg-primary" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="file:///C:/Users/HP/OneDrive%20-%20ptjh.tp.edu.tw/%E6%A1%8C%E9%9D%A2/%E6%A2%81%E6%96%87%E5%BF%83/html/index.html">蟹堡王餐廳</a>
+        <a class="navbar-brand" href="index.html">蟹堡王餐廳</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -115,18 +115,22 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">關於</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="file:///C:/Users/HP/OneDrive%20-%20ptjh.tp.edu.tw/%E6%A1%8C%E9%9D%A2/%E6%A2%81%E6%96%87%E5%BF%83/html/%E4%BC%81%E6%A5%AD%E7%90%86%E5%BF%B51.html">企業理念</a>
-                <a class="dropdown-item" href="file:///C:/Users/HP/OneDrive%20-%20ptjh.tp.edu.tw/%E6%A1%8C%E9%9D%A2/%E6%A2%81%E6%96%87%E5%BF%83/html/%E8%8F%9C%E5%96%AE.html">菜單</a>
-                <a class="dropdown-item" href="file:///C:/Users/HP/OneDrive%20-%20ptjh.tp.edu.tw/%E6%A1%8C%E9%9D%A2/%E6%A2%81%E6%96%87%E5%BF%83/html/%E5%93%A1%E5%B7%A5%E4%BB%8B%E7%B4%B9.html">員工介紹</a>
+                <a class="dropdown-item" href="企業理念1.html">企業理念</a>
+                <a class="dropdown-item" href="菜單.html">菜單</a>
+                <a class="dropdown-item" href="員工介紹.html">員工介紹</a>
 			  </div>
             </li>
           </ul>
+          <div class="d-flex align-items-center ms-auto">
+            <img src="images/會員.png" alt="會員" height="25" class="me-1">
+            <a href="會員登入註冊.html" class="link-light text-decoration-none">登入註冊</a>
+          </div>
         </div>
       </div>
 	  
     </header>
 	
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div style="height: 320px;"></div>
 	
   <main class="menu-container">
     <form id="menu-form">
@@ -222,18 +226,26 @@
       });
       const output = document.getElementById('selected-items');
       if (selectedList.length > 0) {
-        output.innerHTML = `<h3>餐點明細：</h3><ul>${selectedList.map(item => `<li>${item}</li>`).join('')}</ul><h3>總金額：$${totalPrice}  所有餐點接為現做，請耐心等候，謝謝</h3>`;
+        output.innerHTML = `<div class="card p-3 mt-3 border-primary"><h3 class="text-primary">餐點明細：</h3><ul>${selectedList.map(item => `<li><strong>${item}</strong></li>`).join('')}</ul><h4 class="text-danger mt-2">總金額：$${totalPrice}</h4><p class="text-muted mb-0">所有餐點皆為現做，請耐心等候，謝謝！</p></div>`;
       } else {
-        output.innerHTML = '<h3>您尚未選擇餐點</h3>';
+        output.innerHTML = '<div class="alert alert-warning mt-3"><h3>您尚未選擇餐點</h3><p class="mb-0">請勾選上方您想品嚐的美食！</p></div>';
       }
     }
   </script>
-	<footer>
-	<h3><a href="#">⬆️</a></h3>          
-        <div class="copyright">
-        CRABBURGER KING TW & © 2025 Crab King Corporation. Used under license. All rights reserved.
+	<footer style="background-color: #D26900; color: white; padding: 25px 0; text-align: center; margin-top: 40px;">
+      <div class="container">
+        <div class="mb-3">
+          <a href="隱私.HTML" class="text-white text-decoration-none px-3">隱私權申明</a> |
+          <a href="推的網站.html" class="text-white text-decoration-none px-3">參考的網站</a> |
+          <a href="我.html" class="text-white text-decoration-none px-3">網站說明</a>
         </div>
-    
+        <div class="mb-2">
+          <h4><a href="#" class="text-white text-decoration-none">⬆️ 回到頂部</a></h4>
+        </div>
+        <div class="copyright text-light">
+          CRABBURGER KING TW & © 2025 Crab King Corporation. Used under license. All rights reserved.
+        </div>
+      </div>
 	</footer>
   
    
