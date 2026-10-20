@@ -20,9 +20,7 @@ https://jun-0610.github.io/Krusty-Krab-Website/
 
 ## 使用技術
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML
 
 ---
 
